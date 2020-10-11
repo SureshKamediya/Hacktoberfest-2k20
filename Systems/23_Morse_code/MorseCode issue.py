@@ -1,3 +1,40 @@
+
+I am not sure how it fixes first issue.
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+
+#define forf(i,a,b) for(int i=(a);i<(b);i++)
+
+int solve(int n){
+    int table[n+1];
+    memset(table,0,sizeof(table));
+    table[0]=1;
+    forf(i,3,n+1){
+        table[i]+=table[i-3];
+    }
+    forf(i,5,n+1){
+        table[i]+=table[i-5];
+    }
+    forf(i,10,n+1){
+        table[i]+=table[i-10];
+    }
+    return table[n];
+}
+
+int main() {
+	int test;
+	cin >> test;
+	while(test--){
+	    int n;
+	    cin >> n;
+	    int val=solve(n);
+	    cout << val << "\n";
+	}
+	return 0;
+}
+*/
 MRSCD = {'A':'.-', 'B':'-...', 'C':'-.-.', 'D':'-..', 'E':'.', 'F':'..-.', 'G':'--.', 'H':'....', 'I':'..', 'J':'.---', 'K':'-.-', 
                     'L':'.-..', 'M':'--', 'N':'-.', 'O':'---', 'P':'.--.', 'Q':'--.-', 'R':'.-.', 'S':'...', 'T':'-', 'U':'..-', 
                     'V':'...-', 'W':'.--', 'X':'-..-', 'Y':'-.--', 'Z':'--..', '1':'.----', '2':'..---', '3':'...--', '4':'....-', 
